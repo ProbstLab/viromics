@@ -8,7 +8,7 @@ Contact: till.bornemann@uni-due.de
 The script is distributed under the MIT licence (see accompanying LICENSE file)
 
 # Requirements
-The Endmatcher script is run using the bourne-shell and utilizes GNU-awk (gawk) and awk commands. These commands should be natively available on most Linux distributions. Alternatively, they can be installed e.g. using the apt-get interface. Windows users may need to install a virtual machine running a Linux distribution like Ubuntu using e.g. virtualBox (https://www.virtualabox.org). We recommend using Bowtie2 (http://bowtie-bio.sourceforge.net/bowtie2/index.shtml , available e.g. via conda) for the mapping and will refer to Bowtie2 flags in the following but in principle any mapper should work, as long as it produces a valid .sam file output (with the .sam header) and has a flag to allow alternate alignments.   
+The Endmatcher script (and the helper script) is run using the bourne-shell and utilizes GNU-awk (gawk) and awk commands. These commands should be natively available on most Linux distributions. Alternatively, they can be installed e.g. using the apt-get interface. Windows users may need to install a virtual machine running a Linux distribution like Ubuntu using e.g. virtualBox (https://www.virtualabox.org). We recommend using Bowtie2 (http://bowtie-bio.sourceforge.net/bowtie2/index.shtml , available e.g. via conda) for the mapping and will refer to Bowtie2 flags in the following but in principle any mapper should work, as long as it produces a valid .sam file output (with the .sam header) and has a flag to allow alternate alignments.   
 Usage. The Endmatcher.sh script has two positional arguments, 
 
 1) a fasta file containing the contig or scaffold sequences that reads were mapped on
