@@ -16,7 +16,10 @@ Usage. The Endmatcher.sh script has two positional arguments,
 
 The .sam file needs to have been generated using the -a flag (if using Bowtie2) to allow for alternate alignments.
 
-Basic command: bash Endmatcher.sh {scaffolds.fasta} {sam-file}`
+# Basic command 
+```bash
+bash Endmatcher.sh {scaffolds.fasta} {sam-file}
+```
 Depending on the read format (if the for/rev read info is ), the information that a read is the for- or rev-read is truncated in the .sam-output, thus making the read-IDs of both mates identical in the sam file. 
 
 Example:
