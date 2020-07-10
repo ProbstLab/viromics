@@ -1,6 +1,6 @@
 # viromics
 
-Collection of scripts used in viromics
+Collection of scripts developed for use in viromics
 
 # Table of Contents
 
