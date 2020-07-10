@@ -31,8 +31,9 @@ Will be truncated to
 This in combination with the -a flag allowing for multiple alignments makes it impossible to tell from the .sam-file alone if for/rev -readIDs are unique and this information is required for the quality control step of only taking candidate read pairs that only align on the target scaffold. If the for/rev-readIDs are unique, then both IDs should appear only once. If for/rev-readIDs are identical because of the truncation, then their ID should appear twice in the .sam file. The current script assumes the for/rev-readIDs to be identical and manual adjustment is necessary if this is not the case. 
 
 The supplied auxillatory script ID_if_forrevreadidsareidenticalinsam.sh with the usage
-bash ID_if_forrevreadidsareidenticalinsam.sh {for-read-fastq} \
-{rev-read-fastq}
+```bash
+bash ID_if_forrevreadidsareidenticalinsam.sh {for-read-fastq} {rev-read-fastq}
+```
 compares the first for and rev read and prints out 1 (unique for/rev readIDs after trunc) or 2 (identical for-/rev-readIDs after trunc) and could be used as a basis to automatize the setting of this parameter. Both unzipped and fastq.gz files are valid read files for this script.
 
 Concept behind the Endmatcher.sh script. If a scaffold is in reality a circular element, e.g. a virus or a plasmid, then some read pairs should also cover the area connecting both ends of the respective scaffold. The script basically identifies read pairs where each mate aligns on the start or end of the scaffold respectively (first or last 500 bp of the scaffold). 500 bp was chosen as short read sequencing generally targets ~500 bp as the insert size (defined herein as the length of the start of for-read – end of rev-read) and thus valid candidates should end before the 500 bp mark on the respective end. As added quality control, alternate mappings are reported during mapping and candidate read pairs need to not have alternate mappings (they both must only align on the candidate circular scaffold). We chose five read pairs linking both ends as the cutoff for the identification of candidates for circular scaffolds.
