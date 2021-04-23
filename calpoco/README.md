@@ -1,5 +1,14 @@
 ### calcopo - calculation of nucleotide-position wise coverage of a scaffold from .sam mapping files
 
+## license information
+
+The software is provided under the MIT license. Please see the LICENSE file for further details.
+
+## contact information
+
+alexander.probst@uni-due.de
+
+
 ## requirements
 - requires ruby with the nu and trollop gems
 - the .sam file should contain ONLY mapped reads. Unmapped reads can be removed using e.g. shrinksam or the mapped.py script. 
