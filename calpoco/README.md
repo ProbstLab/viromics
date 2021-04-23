@@ -1,4 +1,4 @@
-### Calpoco - Calculation of nucleotide-position wise coverage of a scaffold from .sam mapping files
+### calcopo - calculation of nucleotide-position wise coverage of a scaffold from .sam mapping files
 
 ## requirements
 - requires ruby with the nu and trollop gems
@@ -8,7 +8,7 @@
 ## usage
 
 ```
-ruby calc_cov_pos.rb  -sam {samfile} > {output}
+ruby calcopo.rb  -sam {samfile} > {output}
 ```
 
 ## output
